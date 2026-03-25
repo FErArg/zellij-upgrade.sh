@@ -24,7 +24,8 @@ if [ "$latest_version" != "$current_version" ]; then
     wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
     tar xvzf zellij-x86_64-unknown-linux-musl.tar.gz
     rm zellij-x86_64-unknown-linux-musl.tar.gz
-    mv ~/.local/bin/zellij /home/ferarg/.local/bin/zellij-$fecha2
+    # crea backup por si el archivo descargado tiene errores o no funciona
+    mv ~/.local/bin/zellij /home/ferarg/.local/bin/zellij-$fecha
     mv /tmp/zellij ~/.local/bin/
     chmod +x ~/.local/bin/zellij
 else
